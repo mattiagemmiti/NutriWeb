@@ -16,7 +16,7 @@ NutriWeb is a web application designed to help nutritionists and users manage nu
 ## Technologies Used:
 - PHP
 - HTML/CSS/JavaScript
-- MySQL for database management
+- SQLite for database management
 
 # NutriWeb - Local Installation Instructions:
 
