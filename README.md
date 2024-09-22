@@ -50,3 +50,15 @@ To host and run the "NutriWeb" project locally on your machine, you need to inst
 
 ## Automatic Database Initialization:
 The database is automatically initialized when the application is started. There is no need to manually create the database or tables, as the system will handle it during the first run of the project.
+
+## Samples Existing Accounts:
+
+username: user1
+password: user1
+
+username: user2
+password: user2
+
+username: nutritionist
+password: nutritionist
+
