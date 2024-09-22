@@ -51,6 +51,10 @@ To host and run the "NutriWeb" project locally on your machine, you need to inst
 ## Automatic Database Initialization:
 The database is automatically initialized when the application is started. There is no need to manually create the database or tables, as the system will handle it during the first run of the project.
 
+## Deployment:
+The project is also hosted on Heroku, which supports both front-end and back-end components. However, it's important to note that Heroku's ephemeral filesystem leads to periodic database resets. 
+Therefore, data, including user credentials, are not permanently stored and may be reset at intervals by the platform. This setup is intended solely for illustrative and educational purposes.
+
 ## Samples Existing Accounts:
 
 username: user1
