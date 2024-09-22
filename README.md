@@ -30,7 +30,9 @@ To host and run the "NutriWeb" project locally on your machine, you need to inst
 - When prompted for the installation folder, use the default folder: `C:\xampp`.
 
 ### Step 2: Set Up NutriWeb Project
-- After installing XAMPP, copy the **"NutriWebLocal"** folder (the project folder) into the following directory: `C:/xampp/htdocs/`.
+- After installing XAMPP, copy the **"NutriWeb-main"** folder (the project folder) into the following directory: `C:/xampp/htdocs/`.
+- If the folder was downloaded from GitHub, unzip it and ensure you paste only the subfolder named "NutriWeb-main", which contains the project files.
+- Ensure the folder is named "NutriWeb-main" and the path is C:/xampp/htdocs/NutriWeb-main to match the code references.
 - This will allow the project to be hosted on the XAMPP virtual server.
 
 ### Step 3: Start Apache and MySQL
@@ -40,7 +42,7 @@ To host and run the "NutriWeb" project locally on your machine, you need to inst
 ### Step 4: Access the Project
 - Open a web browser (Chrome, Firefox, etc.).
 - In the address bar, enter the following URL to access the project:
-  - `http://localhost/NutriWebLocal`
+  - `http://localhost/NutriWeb-main`
   
   **OR:**
   - Click on the `open_project.bat` file.

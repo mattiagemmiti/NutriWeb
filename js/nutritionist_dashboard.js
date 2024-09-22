@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
      // Fetches and displays the list of users from the backend on page load
     function fetchUserList() {
-        fetch('http://localhost/NutriWebLocal/php/fetch_users.php')
+        fetch('http://localhost/NutriWeb-main/php/fetch_users.php')
             .then(response => response.json())
             .then(users => populateUserList(users))
             .catch(error => console.error('Error fetching users:', error));
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         selectedUserId = userId;  // Stores the selected user ID globally for feedback use
         console.log('Fetching details for userId:', userId);  // Dev Console Check line
-        fetch(`http://localhost/NutriWebLocal/php/fetch_user_details.php?user_id=${userId}`)
+        fetch(`http://localhost/NutriWeb-main/php/fetch_user_details.php?user_id=${userId}`)
             .then(response => response.json())
             .then(details => displayUserDetails(details))
             .catch(error => console.error('Error fetching user details:', error));
@@ -140,7 +140,7 @@ function displayUserDetails(details) {
 
         // Checks if a feedback message has been written and a user has been selected
         if (feedbackMessage.trim() !== '' && selectedUserId) {
-            fetch('http://localhost/NutriWebLocal/php/send_feedback.php', {
+            fetch('http://localhost/NutriWeb-main/php/send_feedback.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ user_id: selectedUserId, message: feedbackMessage })

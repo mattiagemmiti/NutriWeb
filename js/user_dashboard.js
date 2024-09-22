@@ -24,7 +24,7 @@ document.getElementById('foodForm').addEventListener('submit', function (e) {
     const actualFiber = (formData.get('fiber') * portionSize) / 100;
 
     // Sends the calculated food data to the server and handles the response
-    fetch('http://localhost/NutriWebLocal/php/log_food.php', {
+    fetch('http://localhost/NutriWeb-main/php/log_food.php', {
         method: 'POST',
         body: formData
     })
@@ -60,7 +60,7 @@ function fetchFoodLogs() {
 
     // Organizes food data into daily totals and updates the UI accordingly.
 
-    fetch('http://localhost/NutriWebLocal/php/fetch_food_logs.php')
+    fetch('http://localhost/NutriWeb-main/php/fetch_food_logs.php')
     .then(response => response.json())
     .then(foods => {
         if (foods.length > 0) {
@@ -154,7 +154,7 @@ function updateDailyTotals(food) {
 
 // Fetches and displays feedback messages from the nutritionist to the user.
 function fetchFeedback() {
-    fetch('http://localhost/NutriWebLocal/php/fetch_feedback.php')
+    fetch('http://localhost/NutriWeb-main/php/fetch_feedback.php')
     .then(response => response.json())
     .then(feedbacks => {
         console.log('Fetched feedbacks:', feedbacks);  // debug

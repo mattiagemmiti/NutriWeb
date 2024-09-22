@@ -1,2 +1,2 @@
 @echo off
-start http://localhost/NutriWebLocal
+start http://localhost/NutriWeb-main
