@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsive design and character set, and linking to CSS files -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritionist Dashboard</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section displaying the dashboard title -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Nutritionist Dashboard</h1>
+    </header>
+
+    <!-- Main content area for the dashboard -->
+    <main class="container mt-4">
+        <!-- Section for displaying a list of users -->
+        <section id="user-list" class="mt-5">
+            <h2>Users</h2>
+            <div id="userList" class="list-group">
+                <!-- User list will be populated here dynamically using JavaScript -->
+            </div>
+        </section>
+
+        <!-- Section for displaying selected user details -->
+        <section id="user-details" class="mt-5">
+            <h2>User Details</h2>
+            <div class="table-responsive">
+            <div id="details-container" class="container">
+                
+                <!-- User details will be loaded here dynamically by JavaScript -->
+            </div>
+            </div>
+        </section>
+        
+        <!-- Section for sending feedback to users -->
+        <section id="feedback-section" class="mt-5">
+            <h2>Send Feedback</h2>
+            <form id="feedbackForm">
+                <div class="mb-3">
+                    <textarea id="feedbackMessage" class="form-control" rows="4" placeholder="Write your feedback here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Feedback</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <!-- Footer section with copyright notice -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p> 2024 NutriWeb (Mattia Gemmiti) </p>
+    </footer>
+    
+    <!-- JavaScript files for interaction and Bootstrap functionality -->
+    <script src="js/nutritionist_dashboard.js"></script> <!-- Script for handling dashboard interactions -->
+    <script src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap script for responsive behaviors -->
+</body>
+</html>

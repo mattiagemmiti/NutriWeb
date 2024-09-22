@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriWeb</title>
+    <!-- Bootstrap and custom styles for layout and design -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Page header with site title -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>NutriWeb</h1>
+    </header>
+    
+    <!-- Main container for user interaction areas -->
+    <main class="container mt-4">
+        <!-- Section for food logging form -->
+        <section id="food-log" class="mt-5">
+            <h2>Log Your Food</h2>
+            <!-- Form to capture food log data, sending it to a server-side PHP script -->
+            <form id="foodForm" class="mb-4" action="http://localhost/NutriWebLocal/php/log_food.php" method="post">
+                <!-- Input fields for food name and portion size -->
+                <div class="mb-3">
+                    <label for="foodName" class="form-label">Food Name:</label>
+                    <input type="text" class="form-control" id="foodName" name="foodName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="portionSize" class="form-label">Portion Size (in grams):</label>
+                    <input type="number" class="form-control" id="portionSize" name="portionSize" required>
+                </div>
+                <!-- Nutritional label input within a table structure for clarity -->
+                <div class="mb-3">
+                    <label for="foodName" class="form-label">Nutritional Label (per 100 grams):</label>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Calories</th>
+                                <th>Carbs (g)</th>
+                                <th>Proteins (g)</th>
+                                <th>Fats (g)</th>
+                                <th>Fiber (g)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" class="form-control" id="calories" name="calories" required></td>
+                                <td><input type="number" class="form-control" id="carbs" name="carbs" required></td>
+                                <td><input type="number" class="form-control" id="proteins" name="proteins" required></td>
+                                <td><input type="number" class="form-control" id="fats" name="fats" required></td>
+                                <td><input type="number" class="form-control" id="fiber" name="fiber" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Button to submit the form -->
+                <button type="submit" class="btn btn-success w-100">Add Food</button>
+            </form>
+        </section>
+
+        <!-- Table displaying logged foods -->
+        <div id="foodList" class="mt-5">
+            <h3>Logged Foods</h3>
+            <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Food</th>
+                        <th>Portion (g)</th>
+                        <th>Calories</th>
+                        <th>Carbs (g)</th>
+                        <th>Proteins (g)</th>
+                        <th>Fats (g)</th>
+                        <th>Fiber (g)</th>
+                    </tr>
+                </thead>
+                <tbody id="foodTableBody">
+                    <!-- Dynamic area where logged food items will appear -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <!-- Table for displaying daily nutritional totals -->
+        <div id="dailyTotals" class="mt-5">
+            <h3>Daily Nutrients Totals</h3>
+            <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Total Calories</th>
+                        <th>Total Carbs (g)</th>
+                        <th>Total Proteins (g)</th>
+                        <th>Total Fats (g)</th>
+                        <th>Total Fiber (g)</th>
+                    </tr>
+                </thead>
+                <tbody id="totalsTableBody">
+                    <!-- Rows for daily totals will be dynamically inserted here -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Additional main container for feedback and other sections if necessary -->
+    <main class="container mt-4">
+        <!-- Section for displaying feedback from nutritionists -->
+        <section id="feedback" class="mt-5">
+            <h2>Nutritionist Feedback</h2>
+            <ul id="feedbackList" class="list-group">
+                <!-- Feedback messages will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Page footer with copyright notice -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>2024 NutriWeb (Mattia Gemmiti)</p>
+    </footer>
+
+    <!-- Link to Bootstrap's JavaScript bundle for interactive elements -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom script for handling user dashboard interactions -->
+    <script src="js/user_dashboard.js"></script> 
+</body>
+</html>

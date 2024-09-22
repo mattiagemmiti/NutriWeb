@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta settings for responsiveness and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NutriWeb</title>
+    <!-- Link to Bootstrap and custom stylesheets for styling -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Page header with site title -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>NutriWeb Register</h1>
+    </header>
+
+    <!-- Main content area for registration form -->
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Card design for the registration form -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Register</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Form for registering new users, posts data to server-side PHP script -->
+                        <form id="registerForm" action="http://localhost/NutriWebLocal/php/register.php" method="post">
+                            <!-- Input field for username -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <!-- Input field for password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <!-- Dropdown for selecting user role -->
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Role:</label>
+                                <select class="form-control" id="role" name="role">
+                                    <option value="user">User</option>
+                                    <option value="nutritionist">Nutritionist</option>
+                                </select>
+                            </div>
+                            <!-- Submit button for the form -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                        <!-- Link for already registered users to log in -->
+                        <div class="mt-3 text-center">
+                            Already registered? <a href="login.html">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with copyright notice -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>2024 NutriWeb (Mattia Gemmiti)</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript bundle for responsive features -->
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
